@@ -1,0 +1,39 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pega-Puffle!</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="img/icon.ico" rel="icon" type="image">
+		<audio id="bgm" loop><source src="snd/bgm.mp3" type="audio/mpeg"></audio>
+	</head>
+	<div class="outside">
+		<div class="aside">
+			<h1>Como Jogar?</h1><br>
+			
+			<img src="img/clock.png" class="icon">
+			<p align="justify">Pegue o máximo de puffles que conseguir até o tempo acabar.</p>
+			
+			<img src="img/1.png" class="icon">
+			<p align="justify">Clique nos puffles para pegá-los!</p>
+			
+			<img src="img/life0.png" class="icon">
+			<p align="justify">Seus puffitos vão atrair os puffles selvagens. Se você não for rápido para capturá-los,
+			eles vão devorar essa isca! Caso os puffitos acabem, você perde.</p><br>
+		
+			<select class="clickables" id="lvl">
+				<option>Dificuldade</option>
+				<option value="easy">Fácil</option>
+				<option value="medium">Médio</option>
+				<option value="hard">Difícil</option>
+			</select><br>
+			
+			<input type="checkbox" id="msc">
+			<label for="msc">Mutar a música</label>
+		</div>
+	</div>
+	<body class="menu" id="bg">
+		<button type="button" class="start" id="btn">Jogar!</button>
+		<script src="scriptmenu.js"></script>
+	</body>
+</html>

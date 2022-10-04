@@ -1,0 +1,50 @@
+<! DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pega-Puffle!</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="img/icon.ico" rel="icon" type="image" id="icon">
+		<audio id="c"><source src="snd/catch.mp3" type="audio/mpeg"></audio>
+		<audio id="lost"><source src="snd/lost.mp3" type="audio/mpeg"></audio>
+		<audio id="ring"><source src="snd/ring.mp3" type="audio/mpeg"></audio>
+		<audio id="sfxClock" loop><source src="snd/clock.mp3" type="audio/mpeg"></audio>
+		<audio id="bgmE" loop><source src="snd/easy.mp3" type="audio/mpeg"></audio>
+		<audio id="bgmM" loop><source src="snd/medium.mp3" type="audio/mpeg"></audio>
+		<audio id="bgmH" loop><source src="snd/hard.mp3" type="audio/mpeg"></audio>
+	</head>
+	<body onresize="responsiveScreen()" class="easy">
+		<div id="hud">
+			<div id="life">
+				<img src="img/life0.png" class="icon" id="l1">
+				<img src="img/life0.png" class="icon" id="l2">
+				<img src="img/life0.png" class="icon" id="l3">
+			</div>
+			<div>
+				<img src="img/clock.png" class="icon" id="clock">
+				<span id="timer"></span>
+			</div>
+			
+		</div>
+	</body>
+	<script src="script.js"></script>
+	<script>
+		document.getElementById("timer").innerHTML = time
+		var speed
+		switch (lvl)
+		{
+			case "easy":
+				speed = 2000
+				break
+			case "medium":
+				speed = 1500
+				break
+			case "hard":
+				speed = 1000
+				break
+		}
+		var spawn = setInterval(function(){randomPosition()}, speed)
+		console.log("Velocidade: " + speed)
+	</script>
+</html>
+	
+	
